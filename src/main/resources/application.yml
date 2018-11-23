@@ -1,9 +1,4 @@
 spring:
-  security:
-    user:
-      name: my.username
-      password: 12345
-      
   datasource:
     jdbc-url: jdbc:h2:mem:oauth2
     username: sa
@@ -14,3 +9,11 @@ spring:
   h2:
     console:
       enabled: true
+
+  redis:
+    host: localhost
+    port: 6379
+
+oaut2:
+  token:
+    access: 120
