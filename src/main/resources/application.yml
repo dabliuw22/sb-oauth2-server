@@ -10,10 +10,6 @@ spring:
     console:
       enabled: true
 
-  redis:
-    host: localhost
-    port: 6379
-
 oaut2:
   token:
     access: 120
