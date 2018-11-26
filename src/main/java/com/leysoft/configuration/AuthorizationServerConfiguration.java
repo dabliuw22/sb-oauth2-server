@@ -39,18 +39,10 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.jdbc(dataSource);
-        /*
-         * clients.inMemory().withClient("clientapp").secret("{noop}123456789")
-         * .redirectUris("http://localhost:9000/callback")
-         * .authorizedGrantTypes(Concession.PASSWORD_CREDENTIALS.getValue(),
-         * Concession.REFRESH_TOKEN.getValue())
-         * .accessTokenValiditySeconds(accessTokenValiditySeconds) .scopes(Scope.READ.getValue())
-         */
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        // endpoints.authenticationManager(authenticationManager)
         endpoints.approvalStore(approvalStore()).tokenStore(tokenStore());
     }
 
@@ -66,7 +58,6 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Bean
     public TokenStore tokenStore() {
-        // return new JdbcTokenStore(dataSource)
         return new RedisTokenStore(connectionFactory);
     }
 }
