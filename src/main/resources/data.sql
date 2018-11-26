@@ -1,3 +1,0 @@
-INSERT INTO oauth_client_details(client_id, resource_ids, client_secret, scope, authorized_grant_types, web_server_redirect_uri, 
-	authorities, access_token_validity, refresh_token_validity,additional_information, autoapprove)
-VALUES ('clientapp', null, '$2a$10$/0cyGPMwM7ae7zRv6chOM.mJqphJqV/hC2vxCvxH2yv..P8O57VVK', 'read', 'authorization_code','http://localhost:9000/callback', null, 3000, -1, null, false);
