@@ -1,3 +1,10 @@
 oaut2:
   token:
     access: 120
+    refresh: 86400
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: example-signature-key

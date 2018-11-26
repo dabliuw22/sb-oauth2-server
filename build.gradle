@@ -27,6 +27,7 @@ repositories {
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-security')
 	implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.security:spring-security-jwt:1.0.9.RELEASE')
     implementation('org.springframework.security.oauth:spring-security-oauth2:2.3.4.RELEASE')
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
